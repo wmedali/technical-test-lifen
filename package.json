@@ -1,0 +1,26 @@
+{
+  "name": "technical-test-lifen",
+  "version": "1.0.0",
+  "description": "Technical test to get QA job @ Lifen",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:headless": "cypress run --spec **/*.feature --headless --browser chrome"
+  },
+  "keywords": [
+    "cypress",
+    "qa"
+  ],
+  "author": "Mohammed Ali",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.2.0",
+    "cypress-cucumber-preprocessor": "^2.5.5",
+    "cypress-dotenv": "^1.2.2",
+    "cypress-file-upload": "^4.1.1",
+    "dotenv": "^8.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
