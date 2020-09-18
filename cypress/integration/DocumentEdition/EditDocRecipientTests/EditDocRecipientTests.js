@@ -3,10 +3,7 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 Given('A user is successfully authenticated', () => {
     cy.viewport('macbook-13')
     cy.visit('/')
-    //cy.url().should('contain', 'login.lifen.fr')
-    cy.get('#email').type(Cypress.env('EMAIL'))
-    cy.get('#password').type(Cypress.env('PASSWORD'))
-    cy.get('#continueButton').click()
+    cy.signIn(Cypress.env('EMAIL'), Cypress.env('PASSWORD'))
     cy.url().should('contain', 'app.lifen.fr')
 })
 
