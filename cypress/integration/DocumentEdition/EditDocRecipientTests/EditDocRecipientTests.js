@@ -2,7 +2,7 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
 Given('A user is successfully authenticated', () => {
     cy.viewport('macbook-13')
-    cy.visit('https://app.lifen.fr/')
+    cy.visit('/')
     //cy.url().should('contain', 'login.lifen.fr')
     cy.get('#email').type(Cypress.env('EMAIL'))
     cy.get('#password').type(Cypress.env('PASSWORD'))
@@ -12,7 +12,6 @@ Given('A user is successfully authenticated', () => {
 
 When('He submits a document', () => {
     cy.contains('Boîte d\'envoi').click()
-    //cy.visit('https://app.lifen.fr/request')
     cy.contains('Nouvel envoi').children('input').attachFile({ filePath: 'CR.pdf', encoding: 'base64' })
     cy.contains('1 document a bien été envoyé vers Lifen', { timeout: 10000 }).should('be.visible')
     cy.contains('Finaliser l\'envoi').click()
