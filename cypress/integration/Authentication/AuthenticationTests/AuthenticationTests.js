@@ -6,7 +6,7 @@ Given('The authentication form is displayed', () => {
 
 When('User submits wrong credentials', () => {
     cy.url().should('contain', 'login')
-    cy.signIn('techmail@example.org', 'bG9sb2xv')
+    cy.signIn('candidature-qa@example.org', 'bG9sb2xv')
 })
 
 Then('The authentication fails', () => {
