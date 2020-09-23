@@ -15,6 +15,13 @@ class PreciseView {
         expect(displayedPracticeCity.toLowerCase()).contain(practiceCity.toLowerCase())
     })
  }
+
+ verifyRecipientAdded = (recipientName) => {
+     cy.get('#recipient-panel-container')
+     .invoke('text').then(displayedName => {
+        expect(displayedName.toLowerCase()).contain(recipientName.toLowerCase())
+     })
+ }
 }
 
 export default PreciseView;

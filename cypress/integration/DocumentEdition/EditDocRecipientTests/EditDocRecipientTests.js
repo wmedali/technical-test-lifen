@@ -39,6 +39,5 @@ Then('I add it as a recipient', () => {
 })
 
 And('It is added succesfully to the recipients list of the doc', () => {
-    cy.contains('DESTINATAIRES (2)').should('be.visible')
-    cy.contains('ECLANCHER').should('exist')
+    preciseView.verifyRecipientAdded('Dr William ECLANCHER')
 })
