@@ -7,4 +7,4 @@ Feature: Edit document recipient
         And I search for "William ECLANCHER" as a new recipient
         And I find it as "Dr William ECLANCHER" with speciality "Spécialiste en Médecine Générale" in "Paris"
         Then I add it as a recipient
-        And It is added succesfully to the recipients list of the doc
+        And "Dr William ECLANCHER" is added succesfully to the recipients list of the document

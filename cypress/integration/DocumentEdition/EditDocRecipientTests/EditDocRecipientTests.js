@@ -38,6 +38,6 @@ Then('I add it as a recipient', () => {
     cy.get('#rbt-menu-item-1').click()
 })
 
-And('It is added succesfully to the recipients list of the doc', () => {
-    preciseView.verifyRecipientAdded('Dr William ECLANCHER')
+And('{string} is added succesfully to the recipients list of the document', (recipientName) => {
+    preciseView.verifyRecipientAdded(recipientName)
 })
