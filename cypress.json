@@ -1,4 +1,5 @@
 {
     "testFiles": "**/*.feature",
-    "baseUrl" : "https://app.lifen.fr"
+    "baseUrl" : "https://app.lifen.fr",
+    "defaultCommandTimeout": 10000
 }
